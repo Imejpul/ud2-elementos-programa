@@ -13,7 +13,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         Random r = new Random();
-        int aleatorio = r.nextInt(5);
+        int aleatorio = r.nextInt(100);
 
         int intentos = 0;
         int num = 0;
