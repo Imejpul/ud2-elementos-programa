@@ -7,10 +7,9 @@ import java.io.InputStreamReader;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-	// write your code here
+        // write your code here
 
         int valor = 0;
-        int cont = 1;
         int cantVal = 0;
         int res = 0;
 
@@ -18,20 +17,17 @@ public class Main {
 
         System.out.println("Introduzca cantidad de valores");
 
-        String auxN = br.readLine();
-        cantVal = Integer.parseInt(auxN);
+        cantVal = Integer.parseInt(br.readLine());
 
-        do {
+        for (int cont = 1; cont <= cantVal; cont++) {
 
             System.out.println("Introducir valor " + cont);
 
-            String aux = br.readLine();
-            valor = Integer.parseInt(aux);
+            valor = Integer.parseInt(br.readLine());
 
             res = res + valor;
-            cont++;
 
-        } while (cont <= cantVal);
+        }
 
         System.out.println("El resultado es: " + res);
     }
