@@ -12,7 +12,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int cont = 100;
-        String tipo = "";
+        String tipo;
 
         do {
             System.out.println("Par o Impar");
@@ -22,35 +22,26 @@ public class Main {
 
         // si se elige par:
 
-        if (Objects.equals(tipo, "par")){
+        if (tipo.equalsIgnoreCase("par")) {
 
-            int num = 0;
+            for (int num = 0; cont > 0; cont--) {
 
-            while ( cont > 0 ) {
-
-                num++;
-                num++;
-                cont--;
-
+                num = num + 2;
                 System.out.println("Nº: " + num);
+
             }
 
-        //si se elige impar:
+            //si se elige impar:
 
         } else {
 
-            int num = 1;
+            for (int num = 1; cont > 0; cont--) {
 
-            while ( cont > 0 ) {
-
-                num++;
-                num++;
-                cont--;
-
+                num = num + 2;
                 System.out.println("Nº: " + num);
             }
-        }
 
+        }
 
     }
 }
