@@ -8,31 +8,28 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        int prc = 0;
-        int cant = 0;
+        double prc;
+        double cant;
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-
-        do{
+        do {
 
             System.out.println("Introducir Precio");
-            String aux = br.readLine();
-            prc = Integer.parseInt(aux);
+            prc = Integer.parseInt(br.readLine());
 
         } while (((prc * 100) % 5) != 0);
 
-        do{
+        do {
 
             System.out.println("Introducir Pago");
-            String aux = br.readLine();
-            cant = Integer.parseInt(aux);
+            cant = Integer.parseInt(br.readLine());
 
         } while ((cant < prc) || (((cant * 100) % 5) != 0));
 
         //calculamos las cantidades en centimos de €
 
-        int cambio = cant - prc;
+        int cambio = (int) (cant - prc);
         cambio = cambio * 100;
 
         //calculamos monedas
@@ -46,7 +43,7 @@ public class Main {
         int m50 = resto / 50;      //monedas 50 ct. €
         resto = resto % 50;
 
-        int m20 = resto /20;       //monedas 20 ct. €
+        int m20 = resto / 20;       //monedas 20 ct. €
         resto = resto % 20;
 
         int m10 = resto / 10;      //monedas 10 ct. €
@@ -57,11 +54,7 @@ public class Main {
         //mostramos los cambios resultantes en cantidad de cada moneda
 
         System.out.println("El cambio es: " + m2 + " Monedas de 2 €, " + m1 + " moneddas de 1 €, " + m50 +
-                " monedas de 50 Ct. €, " + m20 + " monedas de 20 Ct. €, " + m10 + " monedas de 10 Ct. €, " +  m5 + " Monedas de 5 Ct. €");
-
-
-
-
+                " monedas de 50 Ct. €, " + m20 + " monedas de 20 Ct. €, " + m10 + " monedas de 10 Ct. €, " + m5 + " Monedas de 5 Ct. €");
 
     }
 }
