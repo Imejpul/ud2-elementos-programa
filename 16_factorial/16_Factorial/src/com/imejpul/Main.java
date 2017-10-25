@@ -13,23 +13,28 @@ public class Main {
         int res = 1;
 
         System.out.println("Introducir valor a calcular");
-        String aux = br.readLine();
-        int valor = Integer.parseInt(aux);
-
-        int fact = 1;
+        int valor = Integer.parseInt(br.readLine());
 
         System.out.print(valor + "!: ");
 
-        while (valor > 0){
+        for (int fact = 1, aux = valor; valor > 0; valor--, fact++) {
 
-            System.out.print(fact + " * ");
+            System.out.print(fact + "");
+            if (fact != aux) {
+
+                System.out.print(" * ");
+
+            } else {
+
+                System.out.print(", ");
+
+            }
+
             res = res * fact;
-            fact++;
-            valor--;
+
         }
 
-        System.out.println(", El resultado es: " + res);
-
+        System.out.println("el resultado es: " + res);
 
     }
 }

@@ -10,26 +10,23 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int impar = 1;
         int result = 1;
 
         System.out.println("Introducir valor a calcular");
-        String aux = br.readLine();
 
-        int valor = Integer.parseInt(aux);
+        int valor = Integer.parseInt(br.readLine());
 
         System.out.print("Sumandos: 1");
 
-        while (valor > 1){
+        for (int impar = 1; valor > 1; valor--) {
 
-            impar = impar +2;
+            impar = impar + 2;
             result = result + impar;
-            valor --;
-
             System.out.print(" + " + impar);
+
         }
 
-        System.out.println(", El resultado es: " +  result);
+        System.out.println(", El resultado es: " + result);
     }
 
 }
