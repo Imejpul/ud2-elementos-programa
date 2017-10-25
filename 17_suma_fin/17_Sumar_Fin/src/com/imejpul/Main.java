@@ -1,10 +1,8 @@
 package com.imejpul;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Objects;
 
 public class Main {
 
@@ -12,19 +10,17 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int max = -2147483647;
-        int min = 2147483647;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
         int suma = 0;
-        String aux = "";
-
-
+        String aux;
 
         do {
 
             System.out.println("Introducir valor");
             aux = br.readLine();
 
-            if (!Objects.equals(aux, "fin")){
+            if (!aux.equals("fin")) {
 
                 int valor = Integer.parseInt(aux);
 
@@ -41,11 +37,9 @@ public class Main {
                 }
             }
 
-
-        } while (!Objects.equals(aux, "fin"));
+        } while (!aux.equalsIgnoreCase("fin"));
 
         System.out.println("La suma total es: " + suma + "\n" + "El valor máximo fue: " + max + " \n" + "El valor mínimo fue: " + min);
-
 
     }
 }
