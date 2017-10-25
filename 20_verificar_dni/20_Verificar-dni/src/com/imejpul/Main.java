@@ -12,17 +12,16 @@ public class Main {
 
         System.out.println("Introducir nº DNI");
 
-        String aux = br.readLine();
-        int numero_dni = Integer.parseInt(aux);
+        int numero_dni = Integer.parseInt(br.readLine());
 
         System.out.println("Introducir Letra DNI");
         String aux2 = br.readLine();
-        char letra_dni = aux2.charAt(0);
+        char letra_dni = aux2.toLowerCase().charAt(0);
 
         int resto = numero_dni % 23;
         char comparador = '0';
 
-        switch (resto){
+        switch (resto) {
             case 0:
                 comparador = 't';
                 break;
@@ -94,7 +93,7 @@ public class Main {
                 break;
         }
 
-        if (comparador == letra_dni){
+        if (comparador == letra_dni) {
 
             System.out.println("Letra Correcta");
 
