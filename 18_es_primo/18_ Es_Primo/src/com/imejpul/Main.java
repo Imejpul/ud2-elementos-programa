@@ -12,27 +12,23 @@ public class Main {
 
         System.out.println("Introducir nº");
 
-        String aux = br.readLine();
+        int numero = Integer.parseInt(br.readLine());
+        boolean primo = false;
+        int contador = 2;
 
-        int numero = Integer.parseInt(aux);
+        do {
+            if (numero % contador == 0) {
 
-        int divisores = 0;
-        int contador = 1;
-
-        do{
-            if (numero % contador == 0){
-
-                divisores++;
-                contador++;
+                primo = true;
 
             } else {
 
                 contador++;
             }
 
-        } while (contador < (numero +1));
+        } while (contador < numero && !primo);
 
-        if (divisores != 2){
+        if (primo = true) {
 
             System.out.println("El número " + numero + " NO es primo");
 
@@ -40,7 +36,6 @@ public class Main {
 
             System.out.println("El número " + numero + " ES primo");
         }
-
 
     }
 }
